@@ -32,6 +32,7 @@
 		AD8760AF252D1F5F0069BC31 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		AD8760B4252D2DE30069BC31 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AD8760B7252D32800069BC31 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		AD8760BA252D4CA90069BC31 /* H4XOR News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4XOR News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 		AD876094252D1A800069BC31 /* H4XOR News */ = {
 			isa = PBXGroup;
 			children = (
+				AD8760BA252D4CA90069BC31 /* H4XOR News.entitlements */,
 				AD876095252D1A800069BC31 /* AppDelegate.swift */,
 				AD876097252D1A800069BC31 /* SceneDelegate.swift */,
 				AD8760B2252D2DD10069BC31 /* Views */,
@@ -318,6 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4XOR News/H4XOR News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4XOR News/Preview Content\"";
 				DEVELOPMENT_TEAM = 32G5V428A6;
@@ -329,6 +332,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shawnwilliams.H4XOR-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -339,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4XOR News/H4XOR News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4XOR News/Preview Content\"";
 				DEVELOPMENT_TEAM = 32G5V428A6;
@@ -350,6 +355,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shawnwilliams.H4XOR-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
