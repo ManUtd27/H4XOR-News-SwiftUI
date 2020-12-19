@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         // Navigation View with some back features build in
-        NavigationView { 
+        NavigationView {
             // List view for lopping over an array that is a table view
             List(networkManager.posts) { post in
                 // Part of the Navigation view that routes to  detail view with data from the looped over item
@@ -24,12 +24,11 @@ struct ContentView: View {
                         Text(post.title)
                     }
                 }
-            }
-            .navigationTitle("H4XOR News")
+            } .navigationBarTitle("H4XOR News")
         }
         .onAppear {
             // Using the Navigation View modifier for when it appears or is active run the block of code
-            // Uses the network manager to fetch Data for the current view
+            
             self.networkManager.fetchData()
         }
     }
