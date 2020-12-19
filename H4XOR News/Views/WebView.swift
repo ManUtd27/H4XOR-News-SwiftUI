@@ -9,7 +9,7 @@ import Foundation
 import WebKit
 import SwiftUI
 
-/// The Structuror for a Web view to load
+/// The Structuror for a Web view to load also the UIViewRepresentable protocal help you wrap a UIKit view in a SwiftUI view
 struct WebView: UIViewRepresentable {
     
     let urlString: String?
@@ -26,11 +26,15 @@ struct WebView: UIViewRepresentable {
     ///   - uiView: The webview
     ///   - context: context description
     func updateUIView(_ uiView: WKWebView, context: Context) {
+        //Check if the url string does have some content
         if let safeString = urlString {
+            // Creates a url from the safe string
             if let url = URL(string: safeString){
+                // Create a URL request from the URL string created
                 let request = URLRequest(url: url)
+                // Use the uiView to load the view with the request
                 uiView.load(request)
-            }
+            } 
         }
     }
 

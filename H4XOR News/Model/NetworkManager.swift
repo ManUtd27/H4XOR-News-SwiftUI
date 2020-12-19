@@ -10,7 +10,7 @@ import Foundation
 class NetworkManager: ObservableObject {
     
     /// The published array of posts
-    // This is part reactive programming and the Observer Design Pattern
+    // This is part reactive programming and the Observer Design Pattern   
     @Published var posts = [Post]()
     
     /// Used the fetch data from the hacker news api. Creates a URL string, session, task, and decodes JSON data. Then publishes the results via observables

@@ -9,11 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // Instance of the Network Manager that is observable so its marked as a Observed Object
     @ObservedObject  var networkManager = NetworkManager()
     
     var body: some View {
-        NavigationView {
+        // Navigation View with some back features build in
+        NavigationView { 
+            // List view for lopping over an array that is a table view
             List(networkManager.posts) { post in
+                // Part of the Navigation view that routes to  detail view with data from the looped over item
                 NavigationLink(destination: DetailView(url: post.url)){
                     HStack {
                         Text(String(post.points))
@@ -24,6 +28,8 @@ struct ContentView: View {
             .navigationTitle("H4XOR News")
         }
         .onAppear {
+            // Using the Navigation View modifier for when it appears or is active run the block of code
+            // Uses the network manager to fetch Data for the current view
             self.networkManager.fetchData()
         }
     }
